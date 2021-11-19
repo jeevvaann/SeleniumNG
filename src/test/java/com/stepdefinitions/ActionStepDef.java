@@ -34,7 +34,7 @@ public class ActionStepDef {
 	        webDriver = setup.getDriver();
 	        actionsPage = new ActionsPage(webDriver);
 	        screenShotUtil.setDriver(webDriver);
-//	        cucumberConstants.setScenario(scenario);
+//	        cucumberConstants.setScenario(scenario);df
 //	    	cucumberConstants.setImagetype(setup.getProperty("IMAGETYPE"));
 	    }
 	 
