@@ -34,6 +34,8 @@ public class cucumberSetup {
 	public void setup(Scenario scenario) {
 	     loadproperties();
 		driver = this.getDriver(properties.getProperty("BrowserName"));
+//		driver = this.getDriver("chrome");
+		
 		this.manageDriver(driver);
 		screenShotUtil.setDriver(driver);
 		cucumberGenerateReport.setDriver(driver);
@@ -89,6 +91,7 @@ public class cucumberSetup {
 	
 	private WebDriver ChromeDriver() {
 		System.setProperty(properties.getProperty("DriverName"), System.getProperty("user.dir")+properties.getProperty("chromeDriverPath"));
+//		System.setProperty("webdriver.chrome.driver","C:\\Users\\jeevan\\eclipse-workspace\\SeleniumNG\\src\\main\\resources\\chromedriver.exe");
 		ChromeOptions chromeOptions = new ChromeOptions();
 		chromeOptions.addArguments("--ignore-certificate-errors");
 		chromeOptions.addArguments("--disable-popup-blocking");
